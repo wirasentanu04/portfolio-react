@@ -66,18 +66,21 @@ export default function Hero() {
             Passionate in building modern, responsive, and user-friendly web applications.
           </p>
 
-            <button
+          <a
+            href="/cv/CV.pdf"
+            download
             className="
-                relative mt-6 px-7 py-3 rounded-lg font-medium
-                bg-primary text-white
-                transition-all duration-300
-                hover:scale-105
-                hover:shadow-[0_0_25px_rgba(108,99,255,0.8)]
-                focus:outline-none
+              relative mt-6 px-7 py-3 rounded-lg font-medium
+              bg-primary text-white
+              transition-all duration-300
+              hover:scale-105
+              hover:shadow-[0_0_25px_rgba(108,99,255,0.8)]
+              focus:outline-none
+              inline-block
             "
-            >
-            Contact Me →
-            </button>
+          >
+            Download CV
+          </a>
         </motion.div>
 
             {/* IMAGE + BLOB */}
