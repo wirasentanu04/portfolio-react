@@ -1,6 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { projects } from "../data/projects";
+import { projects1 } from "../data/projects1";
+import { projects2 } from "../data/projects2";
+
+const projects = [...projects1, ...projects2];
+
 
 export default function ProjectDetail() {
   const { slug } = useParams();
