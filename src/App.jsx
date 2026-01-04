@@ -9,6 +9,9 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import ProjectDetail from "./components/ProjectDetail";
 
+
+import SkillDetail from "./pages/SkillDetail";
+
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +33,7 @@ function App() {
         />
 
         <Route path="/project/:slug" element={<ProjectDetail />} />
+        <Route path="/skills/:slug" element={<SkillDetail />} />
       </Routes>
     </BrowserRouter>
   );

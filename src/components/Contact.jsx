@@ -8,18 +8,18 @@ import {
 import {
   FaTelegramPlane,
   FaInstagram,
-  FaWhatsapp,
+  FaGithub,
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
 import profile from "../assets/wira2.jpg";
 
 const socials = [
-  { icon: <FaTelegramPlane />, link: "#" },
-  { icon: <FaInstagram />, link: "#" },
-  { icon: <FaWhatsapp />, link: "#" },
+  { icon: <FaTelegramPlane />, link: "https://web.telegram.org/a/" },
+  { icon: <FaInstagram />, link: "https://www.instagram.com/wrstnu_?igsh=MWticWtkNDdqNmYxcA==" },
+  { icon: <FaGithub />, link: "https://github.com/wirasentanu04" },
   { icon: <FaLinkedinIn />, link: "#" },
-  { icon: <FaTwitter />, link: "#" },
+  { icon: <FaTwitter />, link: "https://x.com/jawir_99242" },
 ];
 
 export default function Contact() {

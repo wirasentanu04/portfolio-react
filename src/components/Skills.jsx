@@ -1,27 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  FaHtml5,
-  FaJs,
-  FaReact,
-  FaLaravel,
-} from "react-icons/fa";
+import { FaHtml5, FaJs, FaReact, FaLaravel } from "react-icons/fa";
 import { SiTailwindcss, SiFlutter } from "react-icons/si";
 
 const skills = [
-  { name: "HTML & CSS", level: 90, icon: <FaHtml5 /> },
-  { name: "JavaScript", level: 85, icon: <FaJs /> },
-  { name: "React JS", level: 80, icon: <FaReact /> },
-  { name: "Tailwind CSS", level: 85, icon: <SiTailwindcss /> },
-  { name: "Flutter", level: 75, icon: <SiFlutter /> },
-  { name: "Laravel", level: 70, icon: <FaLaravel /> },
+  { name: "HTML & CSS", level: 75, icon: <FaHtml5 />, slug: "html-css" },
+  { name: "JavaScript", level: 55, icon: <FaJs />, slug: "javascript" },
+  { name: "React JS", level: 60, icon: <FaReact />, slug: "react-js" },
+  { name: "Flutter", level: 50, icon: <SiFlutter />, slug: "flutter" },
+  { name: "Laravel", level: 70, icon: <FaLaravel />, slug: "laravel" },
+  { name: "Tailwind CSS", level: 45, icon: <SiTailwindcss />, slug: "tailwind-css" },
 ];
 
 export default function Skills() {
+  const navigate = useNavigate();
+
   return (
-    <section
-      id="skills"
-      className="py-24 bg-gradient-to-b from-dark3 to-dark"
-    >
+    <section id="skills" className="py-24 bg-gradient-to-b from-dark3 to-dark">
       <div className="max-w-5xl mx-auto px-6 md:px-10">
 
         {/* TITLE */}
@@ -44,13 +39,15 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-              className="
-                bg-white/5 border border-white/10
-                rounded-xl p-5
-                hover:border-primary/100
-                transition
-              "
+              whileHover={{ scale: skill.slug ? 1.03 : 1 }}
+              onClick={() => skill.slug && navigate(`/skills/${skill.slug}`)}
+              className={`
+                relative bg-white/5 border border-white/10
+                rounded-xl p-5 transition-all duration-300
+                ${skill.slug ? "cursor-pointer" : ""}
+                hover:border-primary
+                hover:shadow-[0_0_35px_rgba(108,99,255,0.8)]
+              `}
             >
               {/* HEADER */}
               <div className="flex items-center justify-between mb-3">
@@ -62,7 +59,6 @@ export default function Skills() {
                     {skill.name}
                   </span>
                 </div>
-
                 <span className="text-gray-400 text-sm">
                   {skill.level}%
                 </span>
@@ -81,6 +77,7 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

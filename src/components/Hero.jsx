@@ -9,6 +9,7 @@ export default function Hero() {
     "React Developer",
     "Flutter Developer",
     "Laravel Developer",
+    "Internet of Things Enthusiast",
   ];
 
   const [text, setText] = useState("");
