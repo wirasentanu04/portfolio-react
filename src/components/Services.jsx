@@ -9,17 +9,17 @@ const services = [
   {
     icon: <FiMonitor />,
     title: "Web Development",
-    desc: "Developing modern, responsive, and scalable web applications using React, Tailwind CSS, and Laravel.",
+    desc: "Mengembangkan aplikasi web modern, responsif, dan skalabel menggunakan React, Tailwind CSS, dan Laravel.",
   },
   {
     icon: <FiSmartphone />,
     title: "Mobile App Development",
-    desc: "Building cross-platform mobile applications with Flutter and Firebase integration.",
+    desc: "Membangun aplikasi seluler lintas platform dengan integrasi Flutter dan Firebase.",
   },
   {
     icon: <FiDatabase />,
     title: "System Development",
-    desc: "Designing and implementing information systems with clean architecture and secure backend.",
+    desc: "Merancang dan mengimplementasikan sistem informasi dengan arsitektur yang bersih dan backend yang aman.",
   },
 ];
 

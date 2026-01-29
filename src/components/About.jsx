@@ -37,9 +37,8 @@ export default function About() {
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              I enjoy turning complex problems into simple, beautiful, and
-              intuitive designs using modern technologies such as React,
-              Flutter, Tailwind CSS, and Laravel.
+             Saya senang mengubah masalah kompleks menjadi desain yang sederhana, indah, dan intuitif menggunakan teknologi modern seperti React,
+              Flutter, Tailwind CSS, dan Laravel.
             </p>
 
             {/* QUICK STATS */}
@@ -80,17 +79,17 @@ export default function About() {
             {
                 icon: <FiCode />,
                 title: "Web Development",
-                desc: "Building responsive and modern websites using React & Laravel.",
+                desc: "Membangun situs web responsif dan modern menggunakan React & Laravel.",
             },
             {
                 icon: <FiSmartphone />,
                 title: "Mobile Development",
-                desc: "Creating mobile applications with Flutter & Firebase.",
+                desc: "Membuat aplikasi seluler dengan Flutter & Firebase.",
             },
             {
                 icon: <FiLayers />,
                 title: "UI Implementation",
-                desc: "Transforming UI designs into clean and maintainable code.",
+                desc: "Mengubah desain UI menjadi kode yang bersih dan mudah dipelihara.",
             },
             ].map((item, index) => (
             <motion.div

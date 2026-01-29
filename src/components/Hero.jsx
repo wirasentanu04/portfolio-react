@@ -64,8 +64,7 @@ export default function Hero() {
           </h2>
 
           <p className="mt-4 text-gray-400 max-w-md mx-auto md:mx-0">
-            Passionate in building modern, responsive, and user-friendly web applications.
-          </p>
+            Bersemangat dalam membangun aplikasi web modern, responsif, dan ramah pengguna.          </p>
 
           <a
             href="/cv/CV.pdf"

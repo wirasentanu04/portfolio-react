@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaHtml5, FaJs, FaReact, FaLaravel } from "react-icons/fa";
 import { SiTailwindcss, SiFlutter } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
 
 const skills = [
   { name: "HTML & CSS", level: 75, icon: <FaHtml5 />, slug: "html-css" },
@@ -10,6 +11,7 @@ const skills = [
   { name: "Flutter", level: 50, icon: <SiFlutter />, slug: "flutter" },
   { name: "Laravel", level: 70, icon: <FaLaravel />, slug: "laravel" },
   { name: "Tailwind CSS", level: 45, icon: <SiTailwindcss />, slug: "tailwind-css" },
+  { name: "Desain UI/UX", level: 65, icon: <SiFigma />, slug: "Desain UI/UX" },
 ];
 
 export default function Skills() {

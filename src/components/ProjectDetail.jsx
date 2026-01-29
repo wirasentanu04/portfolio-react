@@ -2,8 +2,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { projects1 } from "../data/projects1";
 import { projects2 } from "../data/projects2";
+import { projects3 } from "../data/projects3";
 
-const projects = [...projects1, ...projects2];
+const projects = [...projects1, ...projects2, ...projects3];
 
 
 export default function ProjectDetail() {
