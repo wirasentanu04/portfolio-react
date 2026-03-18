@@ -4,6 +4,7 @@ import { reactJsSkill } from "./skills/reactJs";
 import { flutterSkill } from "./skills/flutter";
 import { laravelSkill } from "./skills/laravel";
 import { tailwindCssSkill } from "./skills/tailwindCss";
+import { uiUxDesignSkill } from "./skills/uiUxDesign";
 
 export const skillsDetail = [
   htmlCssSkill,
@@ -12,4 +13,5 @@ export const skillsDetail = [
   flutterSkill,
   laravelSkill,
   tailwindCssSkill,
+  uiUxDesignSkill,
 ];

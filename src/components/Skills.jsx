@@ -11,7 +11,7 @@ const skills = [
   { name: "Flutter", level: 50, icon: <SiFlutter />, slug: "flutter" },
   { name: "Laravel", level: 70, icon: <FaLaravel />, slug: "laravel" },
   { name: "Tailwind CSS", level: 45, icon: <SiTailwindcss />, slug: "tailwind-css" },
-  { name: "Desain UI/UX", level: 65, icon: <SiFigma />, slug: "Desain UI/UX" },
+  { name: "Desain UI/UX", level: 65, icon: <SiFigma />, slug: "desain-ui-ux" },
 ];
 
 export default function Skills() {

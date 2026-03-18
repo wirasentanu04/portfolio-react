@@ -67,7 +67,7 @@ export default function Hero() {
             Bersemangat dalam membangun aplikasi web modern, responsif, dan ramah pengguna.          </p>
 
           <a
-            href="/cv/CV.pdf"
+            href="/cv/CV_Wira Sentanu.pdf"
             download
             className="
               relative mt-6 px-7 py-3 rounded-lg font-medium
