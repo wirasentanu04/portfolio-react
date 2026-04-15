@@ -11,17 +11,19 @@ export const projects1 = [
   {
     slug: "toilet-inspection-card",
     title: "Digitalisasi Toilet Inspection Card Berbasis Website",
+    shortDesc:
+      "Aplikasi web untuk digitalisasi inspeksi toilet, pelaporan kondisi, dan umpan balik pengelola secara lebih cepat dan terstruktur.",
     desc: "Digitalisasi pelaporan inpeksi toilet berbasis web bertujuan untuk meningkatkan efisiensi dan konsistensi pengelolaan pemeriksaan toilet melalui pemanfaatan teknologi web. Digitalisasi memungkinkan proses pemeriksaan dilakukan dengan cepat dan akurat, sehingga memungkinkan pemantauan kondisi toilet secara real-time. Selain itu, digitalisasi memungkinkan pengguna untuk berpartisipasi dalam melaporkan masalah dan memberikan umpan balik, meningkatkan kesadaran akan kebersihan toilet, dan meningkatkan partisipasi masyarakat dalam pemeliharaan fasilitas. Oleh karena itu, tujuan dari proyek ini adalah untuk meningkatkan kualitas pengelolaan fasilitas sanitasi dan toilet melalui penggunaan teknologi web yang inovatif dan responsif.",
     tech: ["HTML", "PHP", "Bootstrap", "MySQL", "JavaScript"],
     sections: [
       {
-        title: "Halaman Home Pada Website",
-        text: "Halaman Home merupakan halaman utama sistem yang berfungsi sebagai pusat informasi awal bagi pengguna. Halaman ini menampilkan gambaran umum sistem inspeksi toilet, informasi kondisi terbaru, serta menu navigasi yang memudahkan petugas dan admin dalam mengakses fitur-fitur utama secara terstruktur dan efisien.",
+        title: "Halaman Beranda Website",
+        text: "Halaman beranda merupakan halaman utama sistem yang berfungsi sebagai pusat informasi awal bagi pengguna. Halaman ini menampilkan gambaran umum sistem inspeksi toilet, informasi kondisi terbaru, serta menu navigasi yang memudahkan petugas dan admin dalam mengakses fitur-fitur utama secara terstruktur dan efisien.",
         image: proyek1,
       },
       {
-        title: "Halaman Login",
-        text: "Halaman Login digunakan sebagai mekanisme autentikasi pengguna sebelum mengakses sistem. Melalui halaman ini, admin dan petugas diwajibkan melakukan proses login guna memastikan bahwa setiap aktivitas inspeksi dan pengelolaan data dilakukan oleh pengguna yang berwenang, sehingga keamanan dan integritas data dapat terjaga.",
+        title: "Halaman Masuk",
+        text: "Halaman masuk digunakan sebagai mekanisme autentikasi pengguna sebelum mengakses sistem. Melalui halaman ini, admin dan petugas diwajibkan melakukan proses masuk guna memastikan bahwa setiap aktivitas inspeksi dan pengelolaan data dilakukan oleh pengguna yang berwenang, sehingga keamanan dan integritas data dapat terjaga.",
         image: proyek2,
       },
       {
@@ -35,13 +37,13 @@ export const projects1 = [
         image: proyek4,
       },
       {
-        title: "Halaman Feedback",
-        text: "Halaman Feedback digunakan oleh admin atau pihak pengelola untuk memberikan tanggapan, catatan, maupun evaluasi terhadap laporan inspeksi yang telah masuk. Fitur ini bertujuan untuk mendukung proses pengawasan serta meningkatkan kualitas pengelolaan kebersihan toilet secara berkelanjutan.",
+        title: "Halaman Umpan Balik",
+        text: "Halaman umpan balik digunakan oleh admin atau pihak pengelola untuk memberikan tanggapan, catatan, maupun evaluasi terhadap laporan inspeksi yang telah masuk. Fitur ini bertujuan untuk mendukung proses pengawasan serta meningkatkan kualitas pengelolaan kebersihan toilet secara berkelanjutan.",
         image: proyek5,
       },
       {
-        title: "Halaman Hasil Feedback",
-        text: "Halaman Hasil Feedback menampilkan rekapitulasi feedback yang telah diberikan oleh admin terhadap laporan inspeksi. Melalui halaman ini, petugas dapat mengetahui hasil evaluasi, rekomendasi perbaikan, serta tindak lanjut yang perlu dilakukan berdasarkan hasil inspeksi yang telah dilaporkan.",
+        title: "Halaman Hasil Umpan Balik",
+        text: "Halaman hasil umpan balik menampilkan rekapitulasi umpan balik yang telah diberikan oleh admin terhadap laporan inspeksi. Melalui halaman ini, petugas dapat mengetahui hasil evaluasi, rekomendasi perbaikan, serta tindak lanjut yang perlu dilakukan berdasarkan hasil inspeksi yang telah dilaporkan.",
         image: proyek6,
       },
     ],

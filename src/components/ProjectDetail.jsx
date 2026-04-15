@@ -1,23 +1,22 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { projects1 } from "../data/projects1";
-import { projects2 } from "../data/projects2";
-import { projects3 } from "../data/projects3";
-
-const projects = [...projects1, ...projects2, ...projects3];
-
+import { projects } from "../data/projects";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const project = projects.find((p) => p.slug === slug);
+  const compactImageProjects = [
+    "smartfish-berbasis-iot",
+    "aplikasi-pelayanan-desa-berbasis-mobile",
+  ];
+  const useCompactImageLayout = compactImageProjects.includes(project?.slug);
 
-  if (!project) return <p className="text-center mt-20">Project tidak ditemukan</p>;
+  if (!project) return <p className="text-center mt-20">Proyek tidak ditemukan</p>;
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-dark to-dark3 px-6 py-24">
       <div className="max-w-6xl mx-auto">
-
         {/* BACK BUTTON */}
         <motion.button
           onClick={() => navigate(-1)}
@@ -28,7 +27,8 @@ export default function ProjectDetail() {
                      transition-all duration-300
                      hover:bg-primary/20 hover:shadow-[0_0_25px_rgba(108,99,255,.75)]"
         >
-          ← <span className="text-sm font-medium">Kembali ke Portfolio</span>
+          <span aria-hidden="true">&lt;</span>
+          <span className="text-sm font-medium">Kembali ke Portofolio</span>
         </motion.button>
 
         {/* HERO */}
@@ -88,17 +88,27 @@ export default function ProjectDetail() {
               className="grid md:grid-cols-2 gap-16 items-center"
             >
               {/* IMAGE */}
-              <motion.img
-                src={sec.image}
-                alt={sec.title}
-                whileHover={{ scale: 1.04 }}
+              <motion.div
+                whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className={`w-full rounded-2xl object-cover
+                className={`${useCompactImageLayout
+                              ? "w-full max-w-[260px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[360px] mx-auto rounded-[28px] border border-white/10 bg-white/5 p-3"
+                              : ""
+                            }
                             shadow-[0_25px_60px_rgba(0,0,0,.45)]
-                            hover:shadow-[0_0_40px_rgba(108,99,255,.6)]
+                            hover:shadow-[0_0_40px_rgba(108,99,255,.35)]
                             transition-shadow duration-300
                             ${i % 2 === 1 ? "md:order-2" : ""}`}
-              />
+              >
+                <img
+                  src={sec.image}
+                  alt={sec.title}
+                  className={`${useCompactImageLayout
+                                ? "w-full h-auto max-h-[420px] rounded-2xl object-contain bg-dark/20 mx-auto"
+                                : "w-full rounded-2xl object-cover"
+                              }`}
+                />
+              </motion.div>
 
               {/* TEXT */}
               <div className={i % 2 === 1 ? "md:order-1" : ""}>
@@ -112,7 +122,6 @@ export default function ProjectDetail() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

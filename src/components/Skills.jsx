@@ -29,7 +29,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
-          My <span className="text-primary">Skills</span>
+          Keahlian <span className="text-primary">Saya</span>
         </motion.h2>
 
         {/* SKILLS */}

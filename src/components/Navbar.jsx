@@ -1,36 +1,40 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const menus = ["Home", "About", "Skills", "Services", "Portfolio", "Contact"];
+const menus = [
+  { id: "home", label: "Beranda" },
+  { id: "about", label: "Tentang" },
+  { id: "skills", label: "Keahlian" },
+  { id: "services", label: "Layanan" },
+  { id: "portfolio", label: "Portofolio" },
+  { id: "contact", label: "Kontak" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  // ===== HANDLE CLICK =====
-  const handleClick = (item) => {
-    setActive(item);
+  const handleClick = (id) => {
+    setActive(id);
     setOpen(false);
 
-    const el = document.getElementById(item.toLowerCase());
+    const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // ===== SCROLLSPY =====
   useEffect(() => {
     const sections = menus
-      .map((m) => document.getElementById(m.toLowerCase()))
+      .map((menu) => document.getElementById(menu.id))
       .filter(Boolean);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.id;
-            setActive(id.charAt(0).toUpperCase() + id.slice(1));
+            setActive(entry.target.id);
           }
         });
       },
@@ -41,7 +45,6 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  // ===== NAVBAR SCROLL EFFECT =====
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
@@ -63,26 +66,23 @@ export default function Navbar() {
       `}
     >
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-
-        {/* LOGO */}
         <motion.h1
           whileHover={{ scale: 1.05 }}
-          onClick={() => handleClick("Home")}
+          onClick={() => handleClick("home")}
           className="text-xl font-semibold text-primary cursor-pointer"
         >
           Wira<span className="text-white">Sentanu</span>
         </motion.h1>
 
-        {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-8 text-sm">
           {menus.map((item) => (
             <li
-              key={item}
-              onClick={() => handleClick(item)}
+              key={item.id}
+              onClick={() => handleClick(item.id)}
               className="relative cursor-pointer text-gray-300 hover:text-white transition"
             >
-              {item}
-              {active === item && (
+              {item.label}
+              {active === item.id && (
                 <motion.span
                   layoutId="nav-underline"
                   className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary rounded"
@@ -92,16 +92,14 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* HAMBURGER */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-2xl text-white"
-          aria-label="Toggle Menu"
+          aria-label="Buka menu navigasi"
         >
-          ☰
+          &#9776;
         </button>
 
-        {/* MOBILE MENU */}
         <AnimatePresence>
           {open && (
             <motion.div
@@ -119,15 +117,15 @@ export default function Navbar() {
               <ul className="flex flex-col gap-4 py-6 px-6 text-sm">
                 {menus.map((item) => (
                   <li
-                    key={item}
-                    onClick={() => handleClick(item)}
+                    key={item.id}
+                    onClick={() => handleClick(item.id)}
                     className={`cursor-pointer transition ${
-                      active === item
+                      active === item.id
                         ? "text-primary"
                         : "text-gray-300 hover:text-white"
                     }`}
                   >
-                    {item}
+                    {item.label}
                   </li>
                 ))}
               </ul>

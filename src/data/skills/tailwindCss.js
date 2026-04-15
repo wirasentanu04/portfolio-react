@@ -7,12 +7,12 @@ export const tailwindCssSkill = {
   icon: SiTailwindcss,
   level: 45,
   description: `
-Tailwind CSS merupakan framework CSS berbasis utility-first yang digunakan
+Tailwind CSS merupakan framework CSS berbasis utilitas yang digunakan
 untuk membangun antarmuka web secara cepat dan konsisten. Tailwind menyediakan
 kelas-kelas utilitas siap pakai untuk mengatur layout, warna, tipografi,
 spasi, dan responsivitas tanpa perlu menulis CSS kustom yang panjang.
 
-Pendekatan utility-first pada Tailwind CSS memungkinkan pengembang untuk
+Pendekatan berbasis utilitas pada Tailwind CSS memungkinkan pengembang untuk
 membangun desain yang fleksibel, mudah dirawat, serta terintegrasi dengan baik
 dalam pengembangan aplikasi web modern seperti React, Vue, dan Laravel.
   `,

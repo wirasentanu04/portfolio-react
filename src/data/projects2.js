@@ -17,6 +17,8 @@ export const projects2 = [
       {
     slug: "platform-desa-arahan-kidul",
     title: "Platform Layanan Desa Arahan Kidul",
+    shortDesc:
+      "Platform layanan desa berbasis web untuk informasi publik, pengajuan surat online, pengaduan warga, dan pengelolaan administrasi desa.",
     desc: "Balai Desa Arahan Kidul masih menggunakan sistem administrasi manual, menyebabkan keterlambatan, rendahnya transparansi, dan inefisiensi layanan. Penelitian ini platform berbasis website untuk mengintegrasikan pengolahan informasi dan administrasi desa secara lebih efektif. Menggunakan metode SDLC dengan pendekatan Waterfall, sistem ini menyediakan fitur pengelolaan data, administrasi, pengajuan surat online, pengiriman informasi, serta pengaduan masyarakat. Platform dikembangkan dengan Laravel, XAMPP, dan Figma. Sistem yang dijanjikan ini meningkatkan efisiensi, transparansi, serta keterlibatan masyarakat dalam tata kelola desa, serta menjadi model digitalisasi bagi desa lainnya. ",
     tech: ["Laravel", "MySQL", "Bootstrap"],
     sections: [
@@ -71,17 +73,17 @@ export const projects2 = [
         image: desa10,
         },
         {
-        title: "Halaman Fitur Login Admin Desa",
-        text: "Halaman Login Admin Desa digunakan sebagai sistem autentikasi bagi admin sebelum mengakses dashboard pengelolaan. Proses login ini memastikan bahwa hanya pengguna yang berwenang yang dapat mengelola data dan layanan desa.",
+        title: "Halaman Fitur Masuk Admin Desa",
+        text: "Halaman masuk admin desa digunakan sebagai sistem autentikasi bagi admin sebelum mengakses dasbor pengelolaan. Proses masuk ini memastikan bahwa hanya pengguna yang berwenang yang dapat mengelola data dan layanan desa.",
         image: desa11,
         },
         {
-        title: "Halaman Dashboard Admin Desa",
-        text: "Halaman Dashboard Admin Desa berfungsi sebagai pusat pengelolaan sistem, yang menampilkan data pengajuan surat, pengaduan warga, serta informasi layanan desa. Dashboard ini membantu admin dalam melakukan monitoring dan pengelolaan data secara terpusat.",
+        title: "Halaman Dasbor Admin Desa",
+        text: "Halaman dasbor admin desa berfungsi sebagai pusat pengelolaan sistem yang menampilkan data pengajuan surat, pengaduan warga, serta informasi layanan desa. Dasbor ini membantu admin dalam melakukan pemantauan dan pengelolaan data secara terpusat.",
         image: desa12,
         },
         {
-        title: "Halaman Dashboard Admin Bagian Detail & Kirim Balasan",
+        title: "Halaman Dasbor Admin Bagian Detail dan Kirim Balasan",
         text: "Halaman ini digunakan oleh admin untuk melihat detail pengajuan atau pengaduan warga serta memberikan balasan atau tindak lanjut. Fitur ini mendukung proses komunikasi dua arah antara pemerintah desa dan masyarakat secara efektif dan terdokumentasi.",
         image: desa13,
         },

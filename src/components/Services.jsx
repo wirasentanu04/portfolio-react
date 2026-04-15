@@ -8,17 +8,17 @@ import {
 const services = [
   {
     icon: <FiMonitor />,
-    title: "Web Development",
+    title: "Pengembangan Web",
     desc: "Mengembangkan aplikasi web modern, responsif, dan skalabel menggunakan React, Tailwind CSS, dan Laravel.",
   },
   {
     icon: <FiSmartphone />,
-    title: "Mobile App Development",
+    title: "Pengembangan Aplikasi Mobile",
     desc: "Membangun aplikasi seluler lintas platform dengan integrasi Flutter dan Firebase.",
   },
   {
     icon: <FiDatabase />,
-    title: "System Development",
+    title: "Pengembangan Sistem",
     desc: "Merancang dan mengimplementasikan sistem informasi dengan arsitektur yang bersih dan backend yang aman.",
   },
 ];
@@ -39,7 +39,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
-          My <span className="text-primary">Services</span>
+          Layanan <span className="text-primary">Saya</span>
         </motion.h2>
 
         {/* CARDS */}

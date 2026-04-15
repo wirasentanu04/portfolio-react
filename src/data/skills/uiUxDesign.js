@@ -6,8 +6,8 @@ export const uiUxDesignSkill = {
   icon: SiFigma,
   level: 65,
   description: `
-Desain UI/UX adalah proses merancang tampilan (User Interface) dan pengalaman
-pengguna (User Experience) agar sebuah produk digital mudah digunakan,
+Desain UI/UX adalah proses merancang tampilan antarmuka dan pengalaman
+pengguna agar sebuah produk digital mudah digunakan,
 menarik, dan sesuai kebutuhan pengguna.
 
 Pada sisi UI, fokus utamanya adalah elemen visual seperti warna, tipografi,

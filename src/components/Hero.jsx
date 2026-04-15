@@ -5,11 +5,11 @@ import profile from "../assets/wira.jpg";
 export default function Hero() {
   // Typing animation
   const roles = [
-    "Frontend Developer",
-    "React Developer",
-    "Flutter Developer",
-    "Laravel Developer",
-    "Internet of Things Enthusiast",
+    "Pengembang Frontend",
+    "Pengembang React",
+    "Pengembang Flutter",
+    "Pengembang Laravel",
+    "Antusias Internet of Things",
   ];
 
   const [text, setText] = useState("");
@@ -54,7 +54,7 @@ export default function Hero() {
           className="text-center md:text-left"
         >
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Hi, I am <br />
+            Halo, saya <br />
             <span className="text-primary">Wira Sentanu</span>
           </h1>
 
@@ -64,7 +64,8 @@ export default function Hero() {
           </h2>
 
           <p className="mt-4 text-gray-400 max-w-md mx-auto md:mx-0">
-            Bersemangat dalam membangun aplikasi web modern, responsif, dan ramah pengguna.          </p>
+            Bersemangat membangun aplikasi web modern yang responsif, rapi, dan nyaman digunakan.
+          </p>
 
           <a
             href="/cv/CV_Wira Sentanu.pdf"
@@ -79,7 +80,7 @@ export default function Hero() {
               inline-block
             "
           >
-            Download CV
+            Unduh CV
           </a>
         </motion.div>
 

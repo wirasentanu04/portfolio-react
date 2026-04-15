@@ -11,7 +11,7 @@ export default function SkillDetail() {
   if (!skill) {
     return (
       <p className="text-center mt-20 text-gray-400">
-        Skill tidak ditemukan
+        Keahlian tidak ditemukan
       </p>
     );
   }
@@ -21,8 +21,6 @@ export default function SkillDetail() {
   return (
     <section className="relative min-h-screen bg-gradient-to-b from-dark to-dark3 px-6 py-24">
       <div className="max-w-4xl mx-auto">
-
-        {/* BACK BUTTON */}
         <motion.button
           onClick={() => navigate(-1)}
           whileHover={{ scale: 1.06 }}
@@ -37,10 +35,10 @@ export default function SkillDetail() {
             hover:shadow-[0_0_25px_rgba(108,99,255,0.8)]
           "
         >
-          ← <span className="text-sm font-medium">Kembali ke Skills</span>
+          <span aria-hidden="true">&lt;</span>
+          <span className="text-sm font-medium">Kembali ke Keahlian</span>
         </motion.button>
 
-        {/* ICON */}
         <motion.div
           initial={{ scale: 0.6, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -61,7 +59,6 @@ export default function SkillDetail() {
           </motion.div>
         </motion.div>
 
-        {/* TITLE */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,26 +67,24 @@ export default function SkillDetail() {
           {skill.title}
         </motion.h1>
 
-        {/* BADGES */}
         <div className="flex justify-center gap-4 mb-12">
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full
                           bg-white/5 border border-white/10 text-sm text-gray-300">
             <FaCode className="text-primary" />
-            Web Development
+            Pengembangan Web
           </div>
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full
                           bg-white/5 border border-white/10 text-sm text-gray-300">
             <FaLayerGroup className="text-primary" />
-            Frontend Skill
+            Keahlian Frontend
           </div>
         </div>
 
-        {/* LEVEL */}
         <div className="mb-14">
           <div className="flex justify-between mb-2 text-sm text-gray-400">
             <span className="flex items-center gap-2">
               <FaStar className="text-primary" />
-              Skill Level
+              Tingkat Keahlian
             </span>
             <span>{skill.level}%</span>
           </div>
@@ -108,7 +103,6 @@ export default function SkillDetail() {
           </div>
         </div>
 
-        {/* DESCRIPTION */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,11 +111,10 @@ export default function SkillDetail() {
         >
           <article
             className="
-            text-gray-400
+              text-gray-400
               prose prose-invert
               max-w-none
               text-justify
-              
               first-letter:text-5xl
               first-letter:font-bold
               first-letter:text-primary

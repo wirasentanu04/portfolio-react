@@ -17,7 +17,7 @@ export default function About() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
-          About <span className="text-primary">Me</span>
+          Tentang <span className="text-primary">Saya</span>
         </motion.h2>
 
         {/* CONTENT */}
@@ -31,9 +31,8 @@ export default function About() {
             viewport={{ once: true }}
           >
             <p className="text-gray-300 leading-relaxed mb-6">
-              I am a passionate <span className="text-primary font-medium">
-              Frontend Developer</span> with experience in building modern,
-              responsive, and user-friendly web & mobile applications.
+              Saya adalah seorang <span className="text-primary font-medium">
+              Pengembang Frontend</span> yang antusias dan memiliki pengalaman dalam membangun aplikasi web serta mobile yang modern, responsif, dan ramah pengguna.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
@@ -44,9 +43,9 @@ export default function About() {
             {/* QUICK STATS */}
             <div className="grid grid-cols-3 gap-6 text-center">
               {[
-                { label: "Projects", value: "15+" },
-                { label: "Experience", value: "2+ Years" },
-                { label: "Technologies", value: "6+" },
+                { label: "Proyek", value: "15+" },
+                { label: "Pengalaman", value: "2+ Tahun" },
+                { label: "Teknologi", value: "6+" },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -78,18 +77,18 @@ export default function About() {
             {[
             {
                 icon: <FiCode />,
-                title: "Web Development",
-                desc: "Membangun situs web responsif dan modern menggunakan React & Laravel.",
+                title: "Pengembangan Web",
+                desc: "Membangun situs web yang modern dan responsif menggunakan React dan Laravel.",
             },
             {
                 icon: <FiSmartphone />,
-                title: "Mobile Development",
-                desc: "Membuat aplikasi seluler dengan Flutter & Firebase.",
+                title: "Pengembangan Mobile",
+                desc: "Membuat aplikasi seluler dengan Flutter dan Firebase.",
             },
             {
                 icon: <FiLayers />,
-                title: "UI Implementation",
-                desc: "Mengubah desain UI menjadi kode yang bersih dan mudah dipelihara.",
+                title: "Implementasi Antarmuka",
+                desc: "Mengubah desain antarmuka menjadi kode yang bersih, konsisten, dan mudah dipelihara.",
             },
             ].map((item, index) => (
             <motion.div

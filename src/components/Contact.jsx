@@ -37,17 +37,17 @@ export default function Contact() {
     const newErrors = {};
 
     if (!form.name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = "Nama wajib diisi";
     }
 
     if (!form.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email wajib diisi";
     } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "Email is not valid";
+      newErrors.email = "Format email tidak valid";
     }
 
     if (!form.message.trim()) {
-      newErrors.message = "Message is required";
+      newErrors.message = "Pesan wajib diisi";
     }
 
     setErrors(newErrors);
@@ -77,10 +77,10 @@ export default function Contact() {
         setForm({ name: "", email: "", message: "" });
         setErrors({});
       } else {
-        alert("Failed to send message");
+        alert("Pesan gagal dikirim");
       }
-    } catch (err) {
-      alert("Server error");
+    } catch {
+      alert("Terjadi kesalahan pada server");
     }
 
     setLoading(false);
@@ -92,8 +92,6 @@ export default function Contact() {
       className="py-24 bg-gradient-to-b from-dark3 to-dark"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10">
-
-        {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,10 +99,9 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
-          Get In <span className="text-primary">Touch</span>
+          Hubungi <span className="text-primary">Saya</span>
         </motion.h2>
 
-        {/* MAIN CARD */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,8 +113,6 @@ export default function Contact() {
           "
         >
           <div className="grid md:grid-cols-2 gap-10 items-stretch">
-
-            {/* LEFT */}
             <div className="flex flex-col items-center justify-between">
               <motion.div
                 animate={{ y: [0, -8, 0] }}
@@ -130,7 +125,7 @@ export default function Contact() {
               >
                 <img
                   src={profile}
-                  alt="profile"
+                  alt="Foto profil"
                   className="
                     w-56 h-72 md:w-72 md:h-96
                     object-cover rounded-xl
@@ -145,6 +140,7 @@ export default function Contact() {
                     key={i}
                     href={s.link}
                     target="_blank"
+                    rel="noreferrer"
                     whileHover={{ y: -4, scale: 1.15 }}
                     className="
                       w-11 h-11 flex items-center justify-center
@@ -159,14 +155,11 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* RIGHT FORM */}
             <div>
               <form className="space-y-6">
-
-                {/* NAME */}
                 <div>
                   <label className="text-sm text-gray-300 mb-2 block">
-                    Name
+                    Nama
                   </label>
                   <div className="relative">
                     <FiUser className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -183,7 +176,7 @@ export default function Contact() {
                         ${errors.name ? "border-red-500" : "border-white/10"}
                         text-white outline-none focus:border-primary
                       `}
-                      placeholder="Your name"
+                      placeholder="Masukkan nama Anda"
                     />
                   </div>
                   {errors.name && (
@@ -193,7 +186,6 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* EMAIL */}
                 <div>
                   <label className="text-sm text-gray-300 mb-2 block">
                     Email
@@ -213,7 +205,7 @@ export default function Contact() {
                         ${errors.email ? "border-red-500" : "border-white/10"}
                         text-white outline-none focus:border-primary
                       `}
-                      placeholder="your@email.com"
+                      placeholder="nama@email.com"
                     />
                   </div>
                   {errors.email && (
@@ -223,10 +215,9 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* MESSAGE */}
                 <div>
                   <label className="text-sm text-gray-300 mb-2 block">
-                    Message
+                    Pesan
                   </label>
                   <div className="relative">
                     <FiMessageSquare className="absolute left-4 top-4 text-gray-400" />
@@ -244,7 +235,7 @@ export default function Contact() {
                         text-white outline-none resize-none
                         focus:border-primary
                       `}
-                      placeholder="Write your message..."
+                      placeholder="Tulis pesan Anda..."
                     />
                   </div>
                   {errors.message && (
@@ -254,7 +245,6 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* BUTTON */}
                 <button
                   type="button"
                   onClick={handleSubmit}
@@ -267,15 +257,14 @@ export default function Contact() {
                     transition disabled:opacity-60
                   "
                 >
-                  {loading ? "Sending..." : "Send Message"}
+                  {loading ? "Mengirim..." : "Kirim Pesan"}
                 </button>
 
                 {success && (
                   <p className="text-green-400 text-sm text-center">
-                    Message sent successfully ✔
+                    Pesan berhasil dikirim
                   </p>
                 )}
-
               </form>
             </div>
           </div>

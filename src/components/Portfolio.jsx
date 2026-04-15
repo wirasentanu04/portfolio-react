@@ -1,26 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
-const projects = [
-  {
-    slug: "toilet-inspection-card",
-    title: "Rancangan Sistem Digitalisasi Toilet Inspection Card Berbasis Web",
-    desc: "Aplikasi layanan desa berbasis web dengan fitur pengaduan, pengajuan surat, dan aspirasi.",
-    tech: ["HTML", "PHP", "Bootstrap", "MySQL", "JavaScript"],
-  },
-  {
-    slug: "platform-desa-arahan-kidul",
-    title: "Platform Pengolahan Informasi dan Layanan di Balai Desa Arahan Kidul",
-    desc: "Aplikasi Flutter untuk pengaduan masyarakat terintegrasi Firebase.",
-    tech: ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
-  },
-  {
-    slug: "sistem-manajemen-sekolah",
-    title: "Sistem Manajemen Sekolah",
-    desc: "Sistem informasi sekolah dasar untuk manajemen data siswa dan guru.",
-    tech: ["Laravel", "MySQL"],
-  },
-];
+import { projects } from "../data/projects";
 
 export default function Portfolio() {
   const navigate = useNavigate();
@@ -37,7 +17,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
-          My <span className="text-primary">Portfolio</span>
+          Portofolio <span className="text-primary">Saya</span>
         </motion.h2>
 
         {/* GRID */}
@@ -52,23 +32,25 @@ export default function Portfolio() {
               whileHover={{ y: -8 }}
               onClick={() => navigate(`/project/${project.slug}`)}
               className="
+                group h-full
                 cursor-pointer
                 bg-white/5 border border-white/10
                 rounded-2xl p-6
+                flex flex-col
                 transition-all duration-300
                 hover:border-primary
                 hover:shadow-[0_0_35px_rgba(108,99,255,0.7)]
               "
             >
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-semibold mb-3 line-clamp-2 min-h-[3.5rem]">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400 text-sm line-clamp-3">
-                {project.desc}
+              <p className="text-gray-400 text-sm leading-6 line-clamp-4 flex-1">
+                {project.shortDesc ?? project.desc}
               </p>
 
-              <div className="flex flex-wrap gap-2 mt-4">
+              <div className="flex flex-wrap gap-2 mt-5">
                 {project.tech.map((t, i) => (
                   <span
                     key={i}
